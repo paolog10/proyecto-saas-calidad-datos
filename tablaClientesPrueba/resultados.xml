@@ -1,0 +1,25 @@
+﻿{
+	"resumen":
+		[
+			{	
+				"totalRegistros":1100,
+				"registrosPerfectos":37,
+				"pctPerfectos":3.36,
+				"emailsUtilizables":127,
+				"pctEmailsUtilizables":11.55,
+				"emailsInvalidos":795,
+				"pctEmailsInvalidos":72.27,
+				"emailsDuplicados":408,
+				"pctEmailsDuplicados":37.09,
+				"telefonosOK":397,
+				"telefonosInvalidos":703,
+				"dniOK":1100,
+				"dniInvalidos":0,
+				"fechasOK":778,
+				"fechasInvalidas":322,
+				"registrosConProblemas":1063,
+				"pctConProblemas":96.64,
+				"scoreCalidad":4
+			}
+		]
+}

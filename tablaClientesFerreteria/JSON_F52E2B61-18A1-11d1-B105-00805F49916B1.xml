@@ -1,0 +1,15 @@
+﻿{
+	"resumen":
+		[
+			{
+				"totalRegistros":150000,
+				"emailsUtilizables":30023,
+				"pctEmailsUtilizables":20.02,
+				"telefonosUtilizables":52448,
+				"pctTelefonosUtilizables":34.97,
+				"registrosUtilizables":72005,
+				"pctUtilizables":48.00,
+				"scoreCalidad":48
+			}
+		]
+}

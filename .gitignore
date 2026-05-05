@@ -1,0 +1,20 @@
+# Node
+frontend/node_modules
+frontend/build
+
+# .NET
+bin/
+obj/
+
+# VS
+.vs/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# env
+.env
