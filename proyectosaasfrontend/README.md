@@ -1,70 +1,184 @@
-# Getting Started with Create React App
+# 🧠 Proyecto SaaS - Calidad de Datos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación fullstack para **analizar y sanitizar bases de datos de clientes**, detectando errores y mejorando la calidad de la información.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Funcionalidades
 
-### `npm start`
+### 🔍 Análisis de datos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Validación de emails
+* Detección de duplicados
+* Validación de teléfonos
+* Validación de DNI
+* Validación de fechas
+* Identificación de registros perfectos y con problemas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 🧹 Sanitización
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Limpieza automática de datos inválidos
+* Eliminación de duplicados (emails)
+* Normalización de datos
+* Generación de dataset limpio
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📊 Dashboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Score de calidad de datos
+* Métricas clave:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * Registros totales
+  * Registros perfectos
+  * Registros utilizables
+  * Registros con problemas
+* Visualización de errores
+* Ejemplos reales de datos incorrectos
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧱 Arquitectura
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+Frontend (React)
+        ↓
+Backend (.NET API)
+        ↓
+SQL Server
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Tecnologías
 
-## Learn More
+### Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* .NET 6 / 7
+* SQL Server
+* Stored Procedures
+* ADO.NET
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend
 
-### Code Splitting
+* React
+* JavaScript
+* Fetch API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚙️ Instalación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 1. Clonar repositorio
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/TU-USUARIO/proyecto-saas-calidad-datos.git
+cd proyecto-saas-calidad-datos
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### 2. Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Abrir en Visual Studio y ejecutar:
 
-### Deployment
+```
+F5
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Verificar Swagger:
 
-### `npm run build` fails to minify
+```
+https://localhost:7093/swagger
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### 3. Frontend
+
+```bash
+cd proyectosaasfrontend
+npm install
+npm start
+```
+
+Abrir en:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🔌 Endpoints principales
+
+### Analizar datos
+
+```
+GET /api/clientes/analizar
+```
+
+Devuelve:
+
+* resumen
+* errores
+* ejemplos
+
+---
+
+### Sanitizar datos
+
+```
+GET /api/clientes/sanitizar
+```
+
+Devuelve:
+
+* métricas de datos limpios
+* score de calidad post-sanitización
+
+---
+
+## 📈 Ejemplo de resultado
+
+```json
+{
+  "resumen": [
+    {
+      "totalRegistros": 150000,
+      "scoreCalidad": 7
+    }
+  ]
+}
+```
+
+---
+
+## 💡 Caso de uso
+
+Este sistema permite:
+
+* Auditar bases de datos de clientes
+* Detectar problemas de calidad
+* Mejorar la confiabilidad de los datos
+* Preparar datasets para marketing, ventas o analytics
+
+---
+
+## 🔥 Próximas mejoras
+
+* Comparación antes vs después
+* Exportación de datos sanitizados (Excel)
+* Autenticación de usuarios
+* Subida de archivos por UI
+* Dashboard con gráficos
+
+---
+
+## 👨‍💻 Autor
+
+Proyecto desarrollado como base para un SaaS de calidad de datos.
+
+---
